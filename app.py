@@ -32,7 +32,7 @@ def webhook():
                     alert = f"🔥 *New ACT Fibernet Lead!*\n\n👤 *Name:* {name}\n📞 *Number:* +{sender}\n💬 *Reply:* {text}"
                     requests.post(
                         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-                        json={"chat_id": CHAT_ID, "text": alert, "parse_mode": "Markdown"}
+                        json={"chat_id": CHAT_ID, "text": alert}
                     )
     except Exception as e:
         print("Error:", e)
